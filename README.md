@@ -45,7 +45,7 @@ The host maintains a rolling archive, which clears itself every 5 minutes. Every
 And here are the cons:
 
 ##### <ins>Host keeps the room alive</ins>
-Once the host exits, the room self destructs in 10 seconds following a farewell from our beloved bot. The room name is released and can be recreated by another host.
+Once the host exits, the room self destructs in 15 seconds following a farewell from our beloved bot. The room name is released and can be recreated by another host.
 
 ##### <ins>Host chooses the passkey and encryption algorithm</ins>
 As stated host is the creator, designer and destroyer.
