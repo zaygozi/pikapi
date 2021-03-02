@@ -31,3 +31,13 @@ pk connect
 ```
 
 And thats about it. Start talking!
+
+### ARCHITECTURE
+
+P2P broadcast can be implemented using a full mesh network or star network. Pikapo uses start network, where the host acts as a hub and every connected peer is a spoke. There are pros and cons to both implementations. Here are the advantages gained by pikapo using start network:
+
+##### Serial ID
+Every message arriving at the hub is assigned a serial id, before being pushed into a message queue. The ids are simply whole numbers starting from 1. The id of the last arriving message is synced across peers. This helps peers detect missing messages. They then send a resend request for the message to the hub. And the hub fetches the lost message from the rolling archive and sends it back to the requesting peer.
+
+##### Rolling Archive
+The host maintains a rolling archive, which clears itself every 5 minutes. Every message cleared from the message queue is sent to this archive.
