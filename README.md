@@ -52,13 +52,13 @@ As stated host is the creator, designer and destroyer.
 
 ### Room Commands
 
-##### exit
+##### <ins>exit</ins>
 Closes the connection and exits the room. If you are a participant, your departure will be announced to all the members. If you are the host, the room will self destruct after your departure.
 
-##### members
+##### <ins>members</ins>
 A command for the host. Prints out a list of all the members in the room.
 
-##### dloss
+##### <ins>dloss</ins>
 A command for the participants. Provides real time data loss percentage. The data loss may not be sustained as most lost messages arrive late or are requested from the archive. This command can still help detect connection problems. If there is an increased data loss over time, across several peers, there might be a problem with the host.
 
 ### Encryption
@@ -68,3 +68,13 @@ A command for the participants. Provides real time data loss percentage. The dat
 ### Emojis
 
 Emoji support is provided by [node-emoji](https://github.com/omnidan/node-emoji). You can use the syntax ```:kiss:``` to display the emojis at the receiver's end or directly insert emojis from built in panels available on many systems. Not all shells support emojis.
+
+### Special Thanks
+
+[simple-peerjs](https://github.com/nickcis/simple-peerjs) : It uses the signal exchange mechanism of PeerJs with the WebRTC implementation of simple-peer. This library provides the foundation for p2p communication in pikapo.
+
+### Contribute
+
+I don't really know. If there are any new features you want or if you came across any bugs, write them down in the issues section and then we can talk about solving it.
+
+##### Pikapo is still in beta. So expect to find bugs.
