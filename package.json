@@ -1,0 +1,30 @@
+{
+  "name": "pikapi",
+  "version": "0.1.0",
+  "description": "P2P chatrooms in the shell",
+  "main": "main.js",
+  "author": "Arjun Nair",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "pikapi": "./main.js",
+    "pk": "./main.js"
+  },
+  "dependencies": {
+    "boxen": "^5.0.0",
+    "cli-cursor": "^3.1.0",
+    "commander": "^7.1.0",
+    "crypto-js": "^4.0.0",
+    "enquirer": "^2.3.6",
+    "gradient-string": "^1.2.0",
+    "moment": "^2.29.1",
+    "node-emoji": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "simple-peerjs": "^1.0.1",
+    "terminal-kit": "^1.47.0",
+    "uniqid": "^5.3.0",
+    "update-notifier": "^5.1.0",
+    "wrtc": "^0.4.7",
+    "ws": "^7.4.3"
+  }
+}
