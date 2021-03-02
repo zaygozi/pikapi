@@ -13,3 +13,21 @@ If you get an error regarding ```node-pre-gyp``` you will need to perform this a
 ```
 npm i -g node-pre-gyp
 ```
+
+Once installed you could use ```pikapo``` or ```pk``` command to interact with the tool.
+
+### OPTIONS
+
+There are just two options:
+
+Host a chatroom. Fill in the room name, shared passkey, encryption algorithm and your unique alias for the room
+```
+pk host
+```
+
+Join a chatroom. Fill in the room name, shared passkey and your unique alias for the room
+```
+pk connect
+```
+
+And thats about it. Start chatting!
