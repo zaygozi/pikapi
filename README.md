@@ -59,4 +59,8 @@ Closes the connection and exits the room. If you are a participant, your departu
 A command for the host. Prints out a list of all the members in the room.
 
 ##### dloss
-A command for the participants. Provides real time data loss percentage.
+A command for the participants. Provides real time data loss percentage. The data loss may not be sustained as most lost messages arrive late or are requested from the archive. This command can still help detect connection problems. If there is an increased data loss over time, across several peers, there might be a problem with the host.
+
+### Encryption
+
+2 encryption algorithms are available : AES & RABBIT. The messages are encrypted using an encryption key created from the shared passkey. Crypto Js handles the encryption and decryption.
