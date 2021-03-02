@@ -262,7 +262,9 @@ function createRoom() {
         });
 
     }, (err) => {
-        console.log("Adios!");
+        // when cli crashes or ctrl+c is used
+        term('\n');
+        process.exit();
     });
 }
 
