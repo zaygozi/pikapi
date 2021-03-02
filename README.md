@@ -73,8 +73,4 @@ Emoji support is provided by [node-emoji](https://github.com/omnidan/node-emoji)
 
 [simple-peerjs](https://github.com/nickcis/simple-peerjs) : It uses the signal exchange mechanism of PeerJs with the WebRTC implementation of simple-peer. This library provides the foundation for p2p communication in pikapo.
 
-### Contribute
-
-I don't really know. If there are any new features you want or if you came across any bugs, write them down in the issues section and then we can talk about solving it.
-
-##### Pikapo is still in beta. So expect to find bugs.
+##### Pikapo is under development
