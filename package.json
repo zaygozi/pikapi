@@ -1,5 +1,5 @@
 {
-  "name": "pikapi",
+  "name": "pikapo",
   "version": "0.1.0",
   "description": "P2P chatrooms in the shell",
   "main": "main.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "pikapi": "./main.js",
+    "pikapo": "./main.js",
     "pk": "./main.js"
   },
   "dependencies": {
