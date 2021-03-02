@@ -41,3 +41,22 @@ Every message arriving at the hub is assigned a serial id, before being pushed i
 
 ##### Rolling Archive
 The host maintains a rolling archive, which clears itself every 5 minutes. Every message cleared from the message queue is sent to this archive.
+
+And here are the cons:
+
+##### Host keeps the room alive
+Once the host exits, the room self destructs in 10 seconds following a farewell from our beloved bot. The room name is released and can be recreated by another host.
+
+##### Host chooses the passkey and encryption algorithm
+As stated host is the creator, designer and destroyer.
+
+### Room Commands
+
+##### exit
+Closes the connection and exits the room. If you are a participant, your departure will be announced to all the members. If you are the host, the room will self destruct after your departure.
+
+##### members
+A command for the host. Prints out a list of all the members in the room.
+
+##### dloss
+A command for the participants. Provides real time data loss percentage.
