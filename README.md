@@ -30,4 +30,4 @@ Join a chatroom. Fill in the room name, shared passkey and your unique alias for
 pk connect
 ```
 
-And thats about it. Start chatting!
+And thats about it. Start talking!
