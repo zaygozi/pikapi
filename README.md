@@ -63,4 +63,8 @@ A command for the participants. Provides real time data loss percentage. The dat
 
 ### Encryption
 
-2 encryption algorithms are available : AES & RABBIT. The messages are encrypted using an encryption key created from the shared passkey. Crypto Js handles the encryption and decryption.
+2 encryption algorithms are available : AES & RABBIT. The messages are encrypted using a 256-bit encryption key created from the shared passkey. Crypto Js handles the key creation, encryption and decryption.
+
+### Emojis
+
+Emoji support is provided by [node-emoji](https://github.com/omnidan/node-emoji). You can use the syntax ```:kiss:``` to display the emojis at the receiver's end or directly insert emojis from built in panels available on many systems. Not all shells support emojis.
