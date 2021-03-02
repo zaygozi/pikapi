@@ -221,12 +221,12 @@ function joinRoom() {
                 conn.peer.destroy();
                 currentInput.hide();
                 term.bold.brightYellow(`[${moment().format('HH:mm')}] (madbot) [PM] `);
-                term.bold.brightYellow(`Connection with host lost or host has abandoned the room! Self destructing in 10 seconds`);
+                term.bold.brightYellow(`Connection with host lost or host has abandoned the room! Self destructing in 15 seconds`);
                 setTimeout(() => {
                     term('\n\n');
                     console.clear();
                     process.exit();
-                }, 10000);
+                }, 15000);
             });
 
         });
@@ -267,7 +267,7 @@ function takeInput() {
                 term('\n\n');
                 console.clear();
                 process.exit();
-            } else if (message.trim() === '!dloss') {
+            } else if (message.trim() === 'dloss') {
                 currentInput.hide();
                 term.bold.brightYellow(`[${moment().format('HH:mm')}] (madbot) [PM] `);
                 term.bold.brightYellow(`Approx data loss : ${(lost_ids.length/last_id)*100}%`);

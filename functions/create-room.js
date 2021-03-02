@@ -280,7 +280,7 @@ function takeInput() {
                 term('\n\n');
                 console.clear();
                 process.exit();
-            } else if (message.trim() === '!members') {
+            } else if (message.trim() === 'members') {
                 currentInput.hide();
                 term.bold.brightYellow(`[${moment().format('HH:mm')}] (madbot) `);
                 term.bold.brightYellow(`Room currently has ${members.length} members : ${members.join('  ')}`);
