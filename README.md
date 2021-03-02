@@ -1,6 +1,6 @@
 # PIKAPO
 
-What if you could talk to anyone in the world through your terminal or shell? Add to it a beautiful console, emoji support and end to end encryption. No need for web browsers. No need for servers or databases. This is the magic of p2p and this lightweight tool harvests the potential of p2p by helping you create global chatrooms around the world. Connect with anyone in seconds.
+What if you could talk to anyone in the world through your terminal or shell? Add to it a beautiful console, emoji support and end to end encryption. No need for web browsers. No need for servers or databases. This is the magic of p2p and this lightweight tool harvests the potential of p2p by helping you create global chatrooms or join existing rooms. Connect with anyone around the world in seconds.
 
 ### INSTALL
 
