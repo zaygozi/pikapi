@@ -36,18 +36,18 @@ And thats about it. Start talking!
 
 P2P broadcast can be implemented using a full mesh network or star network. Pikapo uses start network, where the host acts as a hub and every connected peer is a spoke. There are pros and cons to both implementations. Here are the advantages gained by pikapo using start network:
 
-##### Serial ID
+##### <ins>Serial ID</ins>
 Every message arriving at the hub is assigned a serial id, before being pushed into a message queue. The ids are simply whole numbers starting from 1. The id of the last arriving message is synced across peers. This helps peers detect missing messages. They then send a resend request for the message to the hub. And the hub fetches the lost message from the rolling archive and sends it back to the requesting peer.
 
-##### Rolling Archive
+##### <ins>Rolling Archive</ins>
 The host maintains a rolling archive, which clears itself every 5 minutes. Every message cleared from the message queue is sent to this archive.
 
 And here are the cons:
 
-##### Host keeps the room alive
+##### <ins>Host keeps the room alive</ins>
 Once the host exits, the room self destructs in 10 seconds following a farewell from our beloved bot. The room name is released and can be recreated by another host.
 
-##### Host chooses the passkey and encryption algorithm
+##### <ins>Host chooses the passkey and encryption algorithm</ins>
 As stated host is the creator, designer and destroyer.
 
 ### Room Commands
