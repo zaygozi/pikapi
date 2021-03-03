@@ -77,7 +77,13 @@ function createRoom() {
             host: 'peerchat-broker-1.herokuapp.com',
             port: 443,
             path: '/',
-            secure: true
+            secure: true,
+            config: {
+                'iceServers': [{
+                    'urls': 'stun:stun.l.google.com:19302'
+                }],
+                'sdpSemantics': 'unified-plan'
+            }
         });
         // Preparing console
         peer.id.then((id) => {
@@ -171,8 +177,7 @@ function createRoom() {
                             conn.peer.send(JSON.stringify(record));
                         }
                     });
-                }
-                else {
+                } else {
                     if (!verified) {
                         let payload = {
                             type: 'auth-error',

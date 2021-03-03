@@ -73,13 +73,24 @@ function joinRoom() {
             host: 'peerchat-broker-1.herokuapp.com',
             port: 443,
             path: '/',
-            secure: true
+            secure: true,
+            config: {
+                'iceServers': [{
+                    'urls': 'stun:stun.l.google.com:19302'
+                }],
+                'sdpSemantics': 'unified-plan'
+            }
         });
         // Preparing console
         peer.id.then((id) => {
             console.log(`Configured id : ${id}`);
             console.log('Initiating connection....');
-            peer.connect(room);
+            peer.connect(room).then(() => {
+                // successful connection
+            }, (err) => {
+                console.log('Unable to join room or room doesnt exist');
+                process.exit();
+            });
         }, (err) => {
             console.error(err);
         });
@@ -235,12 +246,18 @@ function joinRoom() {
         peer.on('error', (err) => {
             if (err.code === 'ERR_CONNECTION_FAILURE') {
                 console.log('Unable to establish connection with remote peer!');
+                process.exit();
             } else if (err.code === 'ERR_WEBRTC_SUPPORT') {
                 console.log('Webrtc error!');
+                process.exit();
             } else if (err.code === 'ERR_SIGNALING') {
                 console.log('Signaling server error!');
+                process.exit();
+            } else if (err.code === 'EAI_AGAIN') {
+                console.log('There was a problem establishing connection! Possible network issue');
+                process.exit();
             } else if (err.type === 'unavailable-id') {
-                console.log('There was a problem in assigning id!');
+                console.log('There was a problem while assigning id!');
                 console.log(' ');
                 return joinRoom();
             } else {
