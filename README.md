@@ -1,4 +1,4 @@
-# PIKAPO
+<p align="center"> <img src="https://raw.githubusercontent.com/zaygozi/pikapo/master/pikapo-logo.png"> </p>
 
 What if you could talk to anyone in the world through your terminal or shell? Add to it a beautiful console, emoji support and end to end encryption. No need for web browsers. No need for servers or databases. This is the magic of p2p and this lightweight tool harvests the potential of p2p by helping you create global chatrooms or join existing rooms. Connect with anyone around the world in seconds.
 
@@ -73,8 +73,4 @@ Emoji support is provided by [node-emoji](https://github.com/omnidan/node-emoji)
 
 [simple-peerjs](https://github.com/nickcis/simple-peerjs) : It uses the signal exchange mechanism of PeerJs with the WebRTC implementation of simple-peer. This library provides the foundation for p2p communication in pikapo.
 
-### Contribute
-
-I don't really know. If there are any new features you want or if you came across any bugs, write them down in the issues section and then we can talk about solving it.
-
-##### Pikapo is still in beta. So expect to find bugs.
+##### Pikapo is under development
