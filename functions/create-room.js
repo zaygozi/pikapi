@@ -79,10 +79,24 @@ function createRoom() {
             path: '/',
             secure: true,
             config: {
-                'iceServers': [{
-                    'urls': 'stun:stun.l.google.com:19302'
-                }],
-                'sdpSemantics': 'unified-plan'
+                iceServers: [
+                    {
+                        url: 'stun:numb.viagenie.ca',
+                        credential: 'Pikapo@123',
+                        username: 'pikapo@pokemail.net'
+                    },
+                    {
+                        urls: 'stun:global.stun.twilio.com:3478?transport=udp'
+                    },
+                    {
+                        urls: 'stun:stun.l.google.com:19302'
+                    },
+                    {
+                        url: 'turn:numb.viagenie.ca',
+                        credential: 'Pikapo@123',
+                        username: 'pikapo@pokemail.net'
+                    }
+                ]
             }
         });
         // Preparing console
