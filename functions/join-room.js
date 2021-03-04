@@ -74,10 +74,12 @@ function joinRoom() {
             port: 443,
             path: '/',
             secure: true,
+            iceTransportPolicy: 'relay',
+            reconnectTimer: 3000,
             config: {
                 iceServers: [
                     {
-                        url: 'stun:numb.viagenie.ca',
+                        urls: 'stun:numb.viagenie.ca',
                         credential: 'Pikapo@123',
                         username: 'pikapo@pokemail.net'
                     },
@@ -88,7 +90,7 @@ function joinRoom() {
                         urls: 'stun:stun.l.google.com:19302'
                     },
                     {
-                        url: 'turn:numb.viagenie.ca',
+                        urls: 'turn:numb.viagenie.ca',
                         credential: 'Pikapo@123',
                         username: 'pikapo@pokemail.net'
                     }
